@@ -8,7 +8,8 @@ let thirdWord = 1
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
+// Function that takes in an array and a string as parameters.
+function addExcitement(theWordArray, punctuation) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -17,7 +18,7 @@ function addExcitement(theWordArray) {
 
         // Checks if the word counter thirdWord is evenly divisible by 3. If it is, the next word in the array is added to buildMeUp and an exclamation point is added to the end.
         if (thirdWord % 3 === 0) {
-            buildMeUp += `${sentence[i]}! `
+            buildMeUp += `${sentence[i]}${punctuation} `
 
             // If it isn't divisible by 3, the next word in the array is added to buildMeUp.
         } else {
@@ -34,4 +35,4 @@ function addExcitement(theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence)
+addExcitement(sentence, "&")
